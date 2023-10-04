@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid Test</title>
+        <style>
+            .Container{
+                display: grid;
+                justify-content: end;
+                grid-template-columns: 60px 60px auto;
+                grid-gap: 10px;
+                background-color: bisque;
+                padding: 10px;
+            }
+            .Container > div {
+                background-color: antiquewhite;
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+            .Container2{
+                display: grid;
+                height: 300px;
+                align-content: space-between;
+                grid-template-columns: auto auto auto;
+                grid-gap: 10px;
+                background-color: rgb(233, 170, 75);
+                padding: 10px;
+            }
+            .Container2 > div{
+                background-color: antiquewhite;
+                text-align: center;
+                padding: 20px;
+                font-size: 30px;
+
+            }
+            .Container3{
+                display: grid;
+                grid-gap: 30px 60px;
+                grid-template-columns: auto auto auto;
+                background-color: aquamarine;
+                padding: 10px;
+            }
+            .Container3 > div{
+                background-color: aqua;
+                border: 1px solid rgb(99, 197, 226);
+                text-align: center;
+                padding: 20px;
+                font-size: 30px;
+            }
+            .Container4{
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto;
+                grid-gap: 10px;
+                background-color: beige;
+                padding: 10px;
+            }
+            .Container4 > div{
+                background-color: blanchedalmond;
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+            #chg1{
+                grid-column: 2/ span 5;
+
+            }
+            .Container5{
+                display: grid;
+                grid-template-columns:  auto auto auto auto auto auto;
+                grid-gap: 10px;
+                background-color: aqua;
+                padding: 10px;
+            }
+            .Container5 > div {
+                background-color: aquamarine;
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+            #chg2{
+                grid-row: 1 / span 2;
+            }
+            .item1{
+                grid-area: header;
+            }
+            .item2{
+                grid-area: menu;
+            }
+            .item3{
+                grid-area: main;
+            }
+            .item4{
+                grid-area: footer;
+            }
+            .Container6{
+                display: grid;
+                grid-template-areas: 
+                 'header header header header header header'
+                 'menu main main main main main'
+                 'menu footer footer footer footer footer'
+                ;
+                grid-gap: 10px;
+                background-color: beige;
+                padding: 10px;
+            }
+            .Container6 > div{
+                background-color: bisque;
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="Container">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div>E</div>
+            <div>F</div>
+        </div>
+<!-- 2nd line-->
+        <div class="Container2">
+             <div>A</div>
+             <div>B</div>
+             <div>C</div>
+             <div>D</div>
+             <div>E</div>
+             <div>F</div>
+</div>
+<!-- 3rd grid-->
+<div class="Container3">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+    <div>I</div>
+</div>
+<!-- 4th grid-->
+<div class="Container4">
+    <div id="41">A</div>
+    <div id="chg1">B</div>
+    <div id="43">C</div>
+    <div id="44">D</div>
+    <div id="45">E</div>
+    <div id="46">F</div>
+    <div id="47">G</div>
+    <div id="48">H</div>
+    <div id="49">I</div>
+    <div id="4a">J</div>
+    <div id="4b">K</div>
+    <div id="4c">L</div>
+</div>
+<!-- Grid 5-->
+<div class="Container5">
+    <div id="chg2">A</div>
+    <div id="42">B</div>
+    <div id="43">C</div>
+    <div id="44">D</div>
+    <div id="45">E</div>
+    <div id="46">F</div>
+    <div id="47">G</div>
+    <div id="48">H</div>
+    <div id="49">I</div>
+    <div id="4a">J</div>
+    <div id="4b">K</div>
+    <div id="4c">L</div>
+</div>
+<!-- grid 6 -->
+<div class="Container6">
+    <div class="item1">Header</div>
+    <div class="item2">Menu</div>
+    <div class="item3">Main</div>
+    <div class="item4">Footer</div>
+</div>
+    </body>
+</html>
